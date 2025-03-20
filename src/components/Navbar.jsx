@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { Download } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,11 +23,14 @@ export default function Navbar() {
       backdrop-blur-lg bg-gradient-to-r from-[#0f172a]/70 via-[#1e293b]/70 to-[#0f172a]/70 border-b border-white/10 shadow-md"
     >
       {/* Logo */}
-      <a
+      {/* <a
         href="#home"
         className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text cursor-pointer"
-      ></a>
+      >
+        Hardik
+      </a> */}
 
+      {/* Desktop Nav */}
       <ul className="hidden md:flex space-x-8 text-sm md:text-base font-medium text-white items-center">
         {navLinks.slice(0, navLinks.length - 1).map((link) => (
           <li key={link} className="group relative">
@@ -47,20 +49,20 @@ export default function Navbar() {
           <a
             href="/Resume/resume.pdf"
             download="Hardik_Chavda_Resume.pdf"
-            className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-4 py-2 rounded-full transition-all duration-300 text-sm md:text-base font-semibold"
+            className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-4 py-2 rounded-full transition-all duration-300 text-sm md:text-base font-semibold flex items-center gap-2"
           >
-            Download Resume
+            <Download size={18} /> Download Resume
           </a>
         </li>
 
         {/* Contact Button */}
         <li>
-          <a
+          {/* <a
             href="#contact"
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition-all duration-300 text-sm md:text-base font-semibold"
           >
             Contact
-          </a>
+          </a> */}
         </li>
       </ul>
 
@@ -88,13 +90,36 @@ export default function Navbar() {
               <li key={link}>
                 <a
                   href={`#${link.toLowerCase()}`}
-                  onClick={() => setMenuOpen(false)} // Close menu after click
+                  onClick={() => setMenuOpen(false)}
                   className="block text-white hover:text-purple-400 text-lg font-medium transition duration-300"
                 >
                   {link}
                 </a>
               </li>
             ))}
+
+            {/* Download Resume Button (Mobile) */}
+            <li>
+              <a
+                href="/Resume/resume.pdf"
+                download="Hardik_Chavda_Resume.pdf"
+                onClick={() => setMenuOpen(false)} // Close menu after click
+                className="inline-flex justify-center items-center border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-6 py-3 rounded-full transition-all duration-300 text-lg font-semibold gap-2"
+              >
+                <Download size={20} /> Download Resume
+              </a>
+            </li>
+
+            {/* Contact Button (Mobile) */}
+            <li>
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)} // Close menu after click
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300 text-lg font-semibold"
+              >
+                Contact
+              </a>
+            </li>
           </motion.ul>
         )}
       </AnimatePresence>

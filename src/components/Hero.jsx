@@ -25,10 +25,8 @@ export default function Hero() {
 
         <p className="text-lg md:text-2xl text-gray-300 max-w-xl">
           A Passionate{" "}
-          <span className="font-semibold text-primary">
-            React / Node.js Developer
-          </span>{" "}
-          crafting seamless web experiences.
+          <span className="font-semibold text-primary">React / Node.js</span>{" "}
+          expert in crafting seamless web experiences.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center gap-4">
