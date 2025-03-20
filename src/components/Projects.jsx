@@ -5,7 +5,7 @@ const projects = [
   {
     title: "VizTrack (Visitor Management System)",
     desc: "A smart Visitor Management System built with React & NodeJS, streamlining check-ins, enhancing security, and improving visitor experiences. Key features: WhatsApp notifications, live image capture, QR code check-ins, and real-time visitor monitoring.",
-    image: "src/assets/viztrack.jpeg",
+    image: "/viztrack.jpeg",
     link: "#",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
  Effortlessly Sync your Inventory with Inventory Management Software
  Features added: Auto Sync, Inventory History, Inventory Analytics, Source of truth, Never Oversell 
 Tools: JDK 11, Spring boot`,
-    image: "src/assets/Ecommerce-Inventory-Management.jpg",
+    image: "/Ecommerce-Inventory-Management.jpg",
     link: "#",
   },
 ];

@@ -17,7 +17,7 @@ export default function About() {
         >
           <div className="relative group">
             <img
-              src="src/assets/profile.jpg" // Replace with your image path
+              src="/profile.jpg" // Replace with your image path
               alt="Hardik Chavda"
               className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl border-4 border-purple-500 group-hover:scale-105 transition-transform duration-500"
             />

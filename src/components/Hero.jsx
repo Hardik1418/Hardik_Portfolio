@@ -19,6 +19,9 @@ export default function Hero() {
             Hardik Chavda
           </span>
         </h1>
+        <span className="text-4xl font-semibold text-white">
+          Software Engineer
+        </span>
 
         <p className="text-lg md:text-2xl text-gray-300 max-w-xl">
           A Passionate{" "}
