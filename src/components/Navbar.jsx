@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,10 +27,8 @@ export default function Navbar() {
       <a
         href="#home"
         className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text cursor-pointer"
-      >
-      </a>
+      ></a>
 
-      {/* Desktop Nav */}
       <ul className="hidden md:flex space-x-8 text-sm md:text-base font-medium text-white items-center">
         {navLinks.slice(0, navLinks.length - 1).map((link) => (
           <li key={link} className="group relative">
@@ -39,10 +38,21 @@ export default function Navbar() {
             >
               {link}
             </a>
-            {/* Underline Hover Effect */}
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600 transition-all duration-300 group-hover:w-full" />
           </li>
         ))}
+
+        {/* Download Resume Button */}
+        <li>
+          <a
+            href="/Resume/resume.pdf"
+            download="Hardik_Chavda_Resume.pdf"
+            className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-4 py-2 rounded-full transition-all duration-300 text-sm md:text-base font-semibold"
+          >
+            Download Resume
+          </a>
+        </li>
+
         {/* Contact Button */}
         <li>
           <a
