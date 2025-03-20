@@ -17,11 +17,7 @@ const projects = [
   },
   {
     title: "SYNKRON - CLOVER INTEGRATION (Internship)",
-    desc: ` Synkron makes multi-channel inventory management easy by automatically synchronizing your
- inventory across all sales channels and keeps track of every unit efficiently.
- Effortlessly Sync your Inventory with Inventory Management Software
- Features added: Auto Sync, Inventory History, Inventory Analytics, Source of truth, Never Oversell 
-Tools: JDK 11, Spring boot`,
+    desc: `Synkron makes multi-channel inventory management easy by automatically synchronizing your inventory across all sales channels and keeps track of every unit efficiently. Effortlessly Sync your Inventory with Inventory Management Software. Features added: Auto Sync, Inventory History, Inventory Analytics, Source of truth, Never Oversell. Tools: JDK 11, Spring boot.`,
     image: "/Ecommerce-Inventory-Management.jpg",
     link: "#",
   },
@@ -53,7 +49,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="relative group rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-lg shadow-lg hover:shadow-purple-500/20 transition duration-300"
+            className="relative group rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-lg shadow-lg hover:shadow-purple-500/20 transition duration-300 flex flex-col"
           >
             {/* Project Image */}
             <div className="relative h-64 overflow-hidden">
@@ -66,18 +62,18 @@ export default function Projects() {
             </div>
 
             {/* Project Content */}
-            <div className="p-6 flex flex-col justify-between h-[220px]">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-purple-400 mb-2">
                 {project.title}
               </h3>
               <p className="text-gray-300 text-sm mb-4">{project.desc}</p>
 
-              {/* Button */}
+              {/* Optional Button */}
               {/* <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 w-fit text-sm text-white font-medium px-4 py-2 bg-purple-600 rounded-lg hover:bg-purple-700 transition"
+                className="flex items-center gap-2 w-fit text-sm text-white font-medium px-4 py-2 bg-purple-600 rounded-lg hover:bg-purple-700 transition mt-auto"
               >
                 View Project
                 <ExternalLink className="w-4 h-4" />
